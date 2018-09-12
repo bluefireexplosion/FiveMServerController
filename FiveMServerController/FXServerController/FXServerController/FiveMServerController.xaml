@@ -1,0 +1,68 @@
+﻿<Window x:Class="FXServerController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FXServerController"
+        mc:Ignorable="d"
+        Title="FiveM Server Controller" Height="710" Width="731.982" MinHeight="668" MinWidth="710" Closing="Window_Closing">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF93DDFF" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Margin="10" Background="#FF939393">
+            <TextBlock TextWrapping="Wrap" FontSize="18" Background="#FF66C0FF" Foreground="White" Padding="15,15,0,5" Grid.IsSharedSizeScope="True" TextDecorations="{x:Null}" Height="56" VerticalAlignment="Top" Text="FiveM Server Controller 1.1" FontWeight="Bold"/>
+            <TextBlock Margin="0,176,0,0" TextWrapping="Wrap" Text="Server Settings" Background="#FF66C0FF" Foreground="#FF3578A6" Height="30" VerticalAlignment="Top" Padding="10,5,0,0"/>
+            <Label Margin="0,206,0,133" Background="#FF939393" BorderBrush="{x:Null}" Padding="10,0,0,0" Foreground="#FF81BD97" HorizontalContentAlignment="Left"/>
+            <Label Background="#FF939393" BorderBrush="{x:Null}" Padding="10,0,0,0" Foreground="#FF81BD97" HorizontalContentAlignment="Left" Height="229" VerticalAlignment="Bottom"/>
+            <TextBlock Margin="0,0,0,229" TextWrapping="Wrap" Text="Auto-Restart Settings" Background="#FF66C0FF" Foreground="#FF3578A6" Padding="10,5,0,0" Height="30" VerticalAlignment="Bottom"/>
+            <CheckBox x:Name="AutoRestart" Content="Enable Auto-Restart (Note: This will only restart enabled servers)" Margin="5,0,10,208" VerticalAlignment="Bottom" Foreground="#FFECECEC"/>
+            <Slider ValueChanged="Slider_ValueChanged" x:Name="Slider" Margin="55,0,10,161" VerticalAlignment="Bottom" Foreground="#FF424242"/>
+            <Label x:Name="SliderVal" Content="0" Margin="5,0,0,161" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" Height="18" Foreground="#FFF0F0F0" Background="#FF71B2E0" HorizontalAlignment="Left" Width="45"/>
+            <Label x:Name="Debugger" Content="X" Margin="10,0,222,10" Height="26" VerticalAlignment="Bottom"/>
+            <Label x:Name="Debugger2" Content="Y" Margin="487,0,0,10" HorizontalAlignment="Left" Width="207" Height="26" VerticalAlignment="Bottom"/>
+            <CheckBox x:Name="ClearCache" Content="Enable Clear Cache on Restart" Margin="5,308,504,0" VerticalAlignment="Top" Foreground="#FF444645" HorizontalAlignment="Left"/>
+            <TextBlock Margin="0,56,0,0" TextWrapping="Wrap" Text="Server Setup" Background="#FF6A9CBF" Foreground="#FF335776" Height="30" VerticalAlignment="Top" Padding="10,5,0,0"/>
+            <TextBox Height="23" x:Name="Server1" Margin="96,92,85,0" TextWrapping="Wrap" Text="C:\FXServer\" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+            <Button x:Name="BrowseServer1"  Click="Button_Click" Content="Browse" Margin="0,92,5,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="75"/>
+            <Label Content="Server 1 Path" HorizontalAlignment="Left" Margin="5,92,0,0" VerticalAlignment="Top" Width="86" Height="23" Background="#FF90BDD6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF1E5D7A"/>
+            <TextBox Height="23" x:Name="Server2" Margin="96,120,85,0" TextWrapping="Wrap" Text="C:\Users\Zach A\Documents\FXServer\" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+            <Button x:Name="BrowseServer2"  Click="Button_Click" Content="Browse" Margin="0,120,5,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="75"/>
+            <Label Content="Server 2 Path" HorizontalAlignment="Left" Margin="5,120,0,0" VerticalAlignment="Top" Width="86" Height="23" Background="#FF90BDD6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF1E5D7A"/>
+            <TextBox Height="23" x:Name="Server3" Margin="96,148,85,0" TextWrapping="Wrap" Text="E:\FXServer\" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+            <Button x:Name="BrowseServer3"  Click="Button_Click" Content="Browse" Margin="0,148,5,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="75"/>
+            <Label Content="Server 3 Path" HorizontalAlignment="Left" Margin="5,148,0,0" VerticalAlignment="Top" Width="86" Height="23" Background="#FF90BDD6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF1E5D7A"/>
+            <Button x:Name="StartServer1"  Click="Button_Click" Content="Start Server 1" Margin="5,211,0,0" VerticalAlignment="Top" Height="23" Background="#FF6AACBF" Foreground="#FF356A7A" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="120"/>
+            <Button x:Name="StartServer2"  Click="Button_Click" Content="Start Server 2" Margin="132,211,0,0" VerticalAlignment="Top" Height="23" Background="#FF6AACBF" Foreground="#FF356A7A" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="122"/>
+            <Button x:Name="StartServer3"  Click="Button_Click" Content="Start Server 3" Margin="259,211,0,0" VerticalAlignment="Top" Height="23" Background="#FF6AACBF" Foreground="#FF356A7A" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="119"/>
+            <Button x:Name="RestartServer1"  Click="Button_Click" Content="Restart Server 1" Margin="5,241,0,0" VerticalAlignment="Top" Height="23" Background="#FF7DC7EA" Foreground="#FF35717A" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="120"/>
+            <Button x:Name="RestartServer2"  Click="Button_Click" Content="Restart Server 2" Margin="132,241,0,0" VerticalAlignment="Top" Height="23" Background="#FF7DC7EA" Foreground="#FF35717A" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="122"/>
+            <Button x:Name="RestartServer3"  Click="Button_Click" Content="Restart Server 3" Margin="259,241,0,0" VerticalAlignment="Top" Height="23" Background="#FF7DC7EA" Foreground="#FF35717A" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="119"/>
+            <Button x:Name="KillServer1"  Click="Button_Click" Content="⚠ Kill Server 1" Margin="5,269,0,0" VerticalAlignment="Top" Height="23" Background="#FF97E1F1" Foreground="#FF356A7A" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="120"/>
+            <Button x:Name="KillServer2"  Click="Button_Click" Content="⚠ Kill Server 2" Margin="132,269,0,0" VerticalAlignment="Top" Height="23" Background="#FF97E1F1" Foreground="#FF356A7A" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="122"/>
+            <Button x:Name="KillServer3"  Click="Button_Click" Content="⚠ Kill Server 3" Margin="259,269,0,0" VerticalAlignment="Top" Height="23" Background="#FF97E1F1" Foreground="#FF356A7A" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="119"/>
+            <ScrollViewer x:Name="Scroller" Margin="383,211,5,267" >
+                <TextBlock x:Name="Error" Text=" " TextWrapping="Wrap" Background="#FF588BA8" Foreground="White" Height="Auto" Width="Auto"/>
+
+            </ScrollViewer>
+            <Label x:Name="HoursRemLabel" Content="Next Restart At: " Margin="0,0,0,85" Padding="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Height="43" Foreground="#FF43808D" Background="#FF6AA4BF" HorizontalAlignment="Left" Width="125" FontSize="14"/>
+            <Label x:Name="HoursRem" Content="Next Restart At: " Margin="125,0,0,85" Padding="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Height="43" Foreground="#FF646464" Background="#FFBBC5C9" HorizontalAlignment="Left" Width="227" FontSize="14"/>
+            <Label x:Name="CurrTimeLabel" Content="Current Time: " Margin="352,0,0,85" Padding="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Height="43" Foreground="#FF396C80" Background="#FF83B9CD" HorizontalAlignment="Left" Width="125" FontSize="14"/>
+            <Label x:Name="CurrTime" Content="Current Time: " Margin="477,0,0,85" Padding="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Height="43" Foreground="#FF646464" Background="#FFBBC5C9" HorizontalAlignment="Left" Width="227" FontSize="14"/>
+            <CheckBox x:Name="EnableServer1" Content="Enable Server 1" Margin="5,328,0,0" VerticalAlignment="Top" Foreground="#FF444645" HorizontalAlignment="Left"/>
+            <CheckBox x:Name="EnableServer2" Content="Enable Server 2" Margin="5,348,0,0" VerticalAlignment="Top" Foreground="#FF444645" HorizontalAlignment="Left"/>
+            <CheckBox x:Name="EnableServer3" Content="Enable Server 3" Margin="5,368,0,0" VerticalAlignment="Top" Foreground="#FF444645" HorizontalAlignment="Left"/>
+            <TextBox Height="23" x:Name="RestartMessage" Margin="125,0,85,133" TextWrapping="Wrap" Text="Currently not working. Coming soon!" VerticalContentAlignment="Center" VerticalAlignment="Bottom"/>
+            <Label Content="⚠ Restart Message" Margin="5,0,0,133" Width="120" Height="23" Background="#FF90BDD6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF1E5D7A" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <Button x:Name="CopyRestartMSG"  Click="Button_Click" Content="Copy" Margin="0,0,10,133" Height="23" Width="75" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <CheckBox x:Name="UseRestartMessage" Content="Enable Restart Message" Margin="5,0,10,188" VerticalAlignment="Bottom" Foreground="#FFECECEC"/>
+            <Label Content="Created by BlueFireExplosion" Width="178" Height="25" Background="{x:Null}" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF5F5F5F" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,10" FontWeight="Bold"/>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FXServerController.g.cs
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\App.g.cs
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FXServerController.baml
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FXServerController.Properties.Resources.resources
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FXServerController.csproj.GenerateResource.cache
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FXServerController.csproj.CoreCompileInputs.cache
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FXServerController.csprojAssemblyReference.cache
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FiveMController_MarkupCompile.cache
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FiveMController_MarkupCompile.lref
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FiveMController.g.resources
+C:\Users\Zach A\documents\resources\FXServerController\FiveMController.exe.config
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FiveMController.exe
+C:\Users\Zach A\documents\resources\FXServerController\FXServerController\FXServerController\obj\Debug\FiveMController.pdb
+C:\Users\Zach A\documents\resources\FXServerController\FiveMController.exe
+C:\Users\Zach A\documents\resources\FXServerController\FiveMController.pdb
