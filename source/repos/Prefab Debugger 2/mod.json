@@ -1,0 +1,12 @@
+{
+  "Id": "PrefabDebugger",
+  "DisplayName": "Prefab Debugger",
+  "Author": "BlueFireExplosion",
+  "Version": "0.0.2",
+  "Enable": true,
+  "AssemblyName": "PrefabDebugger.dll",
+  "EntryMethod": "BlueFire.Debugger.PrefabDebugger.Main",
+  "Config": {
+  	"TestBool": true
+  }
+}
